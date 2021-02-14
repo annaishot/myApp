@@ -1,0 +1,27 @@
+<ul class="heroes">
+    <div>Male</div>
+    <div *ngFor="let owner of owners">
+        <div *ngIf="owner.gender=='Male'" class="badge">
+            <div *ngFor="let pet of owner.pets">
+                <li *ngIf="pet.type=='Cat'" class="badge">{{pet.name}}</li>
+
+            </div>
+        </div>
+    </div>
+</ul>
+
+
+
+<ul class="heroes">
+    <div>FeMale</div>
+    <div *ngFor="let owner of owners">
+        <div *ngIf="owner.gender=='Female'" class="badge">
+            <div *ngFor="let pet of owner.pets">
+                <li *ngIf="pet.type=='Cat'" class="badge">{{pet.name}}</li>
+
+            </div>
+        </div>
+
+    </div>
+
+</ul>
