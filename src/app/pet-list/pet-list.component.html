@@ -1,27 +1,10 @@
 <ul class="heroes">
-    <div>Male</div>
-    <div *ngFor="let owner of owners">
-        <div *ngIf="owner.gender=='Male'" class="badge">
-            <div *ngFor="let pet of owner.pets">
-                <li *ngIf="pet.type=='Cat'" class="badge">{{pet.name}}</li>
-
+    <div *ngFor="let c of customers">
+        <li>
+            <div> {{c.gender}}</div>
+            <div *ngFor="let pet of c.pets">
+                <div class="badge">&nbsp;&nbsp;{{pet}}</div>
             </div>
-        </div>
+        </li>
     </div>
-</ul>
-
-
-
-<ul class="heroes">
-    <div>FeMale</div>
-    <div *ngFor="let owner of owners">
-        <div *ngIf="owner.gender=='Female'" class="badge">
-            <div *ngFor="let pet of owner.pets">
-                <li *ngIf="pet.type=='Cat'" class="badge">{{pet.name}}</li>
-
-            </div>
-        </div>
-
-    </div>
-
 </ul>
